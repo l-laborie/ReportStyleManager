@@ -12,6 +12,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ReportStyleDatabase", "Repo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportStyleModifier", "ReportStyleModifier\ReportStyleModifier.csproj", "{C9340E00-C636-4592-834F-AEDA6523F1B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportStyleModifierTest", "ReportStyleModifierTest\ReportStyleModifierTest.csproj", "{1351905C-5918-4E2F-8DDD-F1EC8C700790}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{C9340E00-C636-4592-834F-AEDA6523F1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9340E00-C636-4592-834F-AEDA6523F1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9340E00-C636-4592-834F-AEDA6523F1B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1351905C-5918-4E2F-8DDD-F1EC8C700790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1351905C-5918-4E2F-8DDD-F1EC8C700790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1351905C-5918-4E2F-8DDD-F1EC8C700790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1351905C-5918-4E2F-8DDD-F1EC8C700790}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

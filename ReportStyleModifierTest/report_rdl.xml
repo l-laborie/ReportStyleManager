@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+    <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+    <AutoRefresh>0</AutoRefresh>
+    <DataSources>
+        <DataSource Name="ISS">
+            <DataSourceReference>ISS</DataSourceReference>
+            <rd:SecurityType>None</rd:SecurityType>
+            <rd:DataSourceID>47515c8e-5111-4f54-afa9-b7c21ca10b68</rd:DataSourceID>
+        </DataSource>
+    </DataSources>
+    <DataSets>
+        <DataSet Name="dsReportStyle">
+            <Query>
+                <DataSourceName>ISS</DataSourceName>
+                <QueryParameters>
+                    <QueryParameter Name="@report_name">
+                        <Value>Astro_dist_per_spectrum_less_10_parsec</Value>
+                    </QueryParameter>
+                    <QueryParameter Name="@report_parameter">
+                        <Value>=Parameters!Spectrum_class.Value</Value>
+                    </QueryParameter>
+                </QueryParameters>
+                <CommandType>StoredProcedure</CommandType>
+                <CommandText>up_ReportStyle_by_name_and_parameter</CommandText>
+                <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+            </Query>
+            <Fields>
+                <Field Name="HEADER_Font_Color">
+                    <DataField>HEADER_Font_Color</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="HEADER_Font_FontSize">
+                    <DataField>HEADER_Font_FontSize</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="HEADER_Font_FontFamily">
+                    <DataField>HEADER_Font_FontFamily</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="HEADER_Font_FontStyle">
+                    <DataField>HEADER_Font_FontStyle</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="HEADER_Font_FontWeight">
+                    <DataField>HEADER_Font_FontWeight</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="HEADER_Default_BackgroundColor">
+                    <DataField>HEADER_Default_BackgroundColor</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="TABLE_MAINTITLE_Font_Color">
+                    <DataField>TABLE_MAINTITLE_Font_Color</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="TABLE_MAINTITLE_Font_FontSize">
+                    <DataField>TABLE_MAINTITLE_Font_FontSize</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="TABLE_MAINTITLE_Font_FontFamily">
+                    <DataField>TABLE_MAINTITLE_Font_FontFamily</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="TABLE_MAINTITLE_Font_FontStyle">
+                    <DataField>TABLE_MAINTITLE_Font_FontStyle</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="TABLE_MAINTITLE_Font_FontWeight">
+                    <DataField>TABLE_MAINTITLE_Font_FontWeight</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+                <Field Name="TABLE_MAINTITLE_Default_BackgroundColor">
+                    <DataField>TABLE_MAINTITLE_Default_BackgroundColor</DataField>
+                    <rd:UserDefined>true</rd:UserDefined>
+                </Field>
+            </Fields>
+        </DataSet>
+    </DataSets>
+    <ReportSections>
+        <ReportSection>
+            <Body>
+                <ReportItems>
+                    <Textbox Name="Title_HEADER">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                            <Paragraph>
+                                <TextRuns>
+                                    <TextRun>
+                                        <Value>Title of my test report</Value>
+                                        <Style>
+                                            <FontFamily>Segoe UI Light</FontFamily>
+                                            <FontSize>12pt</FontSize>
+                                        </Style>
+                                    </TextRun>
+                                </TextRuns>
+                                <Style />
+                            </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>textbox1</rd:DefaultName>
+                        <Height>0.43in</Height>
+                        <Width>5in</Width>
+                        <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                    </Textbox>
+                    <Tablix Name="table1">
+                        <TablixBody>
+                            <TablixColumns>
+                                <TablixColumn>
+                                    <Width>1in</Width>
+                                </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                                <TablixRow>
+                                    <Height>0.22in</Height>
+                                    <TablixCells>
+                                        <TablixCell>
+                                            <CellContents>
+                                                <Textbox Name="tabletitle_MAINTITLE">
+                                                    <CanGrow>true</CanGrow>
+                                                    <KeepTogether>true</KeepTogether>
+                                                    <Paragraphs>
+                                                        <Paragraph>
+                                                            <TextRuns>
+                                                                <TextRun>
+                                                                    <Value>column title</Value>
+                                                                    <Style>
+                                                                        <FontFamily />
+                                                                        <FontSize>11pt</FontSize>
+                                                                        <FontWeight>Bold</FontWeight>
+                                                                    </Style>
+                                                                </TextRun>
+                                                            </TextRuns>
+                                                            <Style />
+                                                        </Paragraph>
+                                                    </Paragraphs>
+                                                    <Style>
+                                                        <Border>
+                                                            <Color>LightGrey</Color>
+                                                        </Border>
+                                                        <BottomBorder>
+                                                            <Style>Solid</Style>
+                                                        </BottomBorder>
+                                                        <FontFamily />
+                                                        <PaddingLeft>2pt</PaddingLeft>
+                                                        <PaddingRight>2pt</PaddingRight>
+                                                        <PaddingTop>2pt</PaddingTop>
+                                                        <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                </Textbox>
+                                            </CellContents>
+                                        </TablixCell>
+                                    </TablixCells>
+                                </TablixRow>
+                            </TablixRows>
+                        </TablixBody>
+                    </Tablix>
+                </ReportItems>
+            </Body>
+        </ReportSection>
+    </ReportSections>
+</Report>
