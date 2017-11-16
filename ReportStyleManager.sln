@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49B4244F-97DE-4E63-9357-BAFE5D7804C3}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ReportStyleDatabase", "ReportStyleDatabase\ReportStyleDatabase.sqlproj", "{D3CFC8B2-CF63-43A6-9227-5D4629B44706}"
