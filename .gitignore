@@ -1,0 +1,7 @@
+# All Visual studio Stuff
+*.dbmdl
+*.refactorlog
+*.user
+*.jfm
+bin/
+obj/
