@@ -48,6 +48,7 @@ namespace ReportStyleModifier
 
         public void SetManagedStyle(string dataset_name)
         {
+            XmlNamespaceManager nsmgr = this.getNamespaceManagerFromRoot();
             Descriptor descriptor = this.getDescriptor(dataset_name);
             foreach(string level1 in descriptor.GetLevel1Values())
             {
@@ -70,7 +71,10 @@ namespace ReportStyleModifier
                                         "=First(Fields!{0}.Value, \"{1}\")",
                                         descriptor.RebuildValue(level1, level2, level3, level4),
                                         dataset_name);
-                                    XmlNode entry = this.report_document.CreateNode(XmlNodeType.Element, level4, "");
+                                    XmlNode entry = this.report_document.CreateNode(
+                                        XmlNodeType.Element,
+                                        level4,
+                                        nsmgr.LookupNamespace("df"));
                                     entry.InnerText = entry_value;
                                     
                                     XmlNode current_entry = style.SelectSingleNode(this.rewriteXPath(level4, false));
