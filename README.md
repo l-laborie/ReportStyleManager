@@ -53,7 +53,7 @@ If you change any style or any assignation, the next run of you report will be c
 Technical Content
 -----------------
 
-The current solution contains 3 Visual Studio projects:
+The current solution contains 4 Visual Studio projects:
 
 1. ReportStyleDatabase:
    This database with everything you need to manage styles.
@@ -80,6 +80,10 @@ The current solution contains 3 Visual Studio projects:
 
 3. ReportStyleModifierTest
    Unit test for the modifier program
+
+4. ReportStyleReport
+   Sample report project only based on the database produce by the first
+   project to demonstrate how produce a customized project.
 
 Into the Wood
 -------------

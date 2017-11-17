@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>ReportStyle</DataSourceReference>
+      <CommandText>SELECT
+    ISNULL(rs.StyleName, 'default') AS StyleName, COUNT(*) AS Element_count
+FROM
+    Element e
+    LEFT JOIN ReportStyleElement rse ON e.Id = rse.ElementId
+    LEFT JOIN ReportStyle rs on rse.ReportStyleId = rs.Id
+GROUP BY
+    rs.StyleName</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="StyleName">
+        <DataField>StyleName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Element_count">
+        <DataField>Element_count</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
