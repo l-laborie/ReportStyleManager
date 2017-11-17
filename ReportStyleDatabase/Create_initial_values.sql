@@ -49,5 +49,5 @@ BEGIN
         , ('TABLE_TOTAL_Font_FontFamily' , 'Normal')
         , ('TABLE_TOTAL_Font_FontStyle', 'Bold')
         , ('TABLE_TOTAL_Font_FontWeight', 'Normal')
-    , ('TABLE_TOTAL_Default_BackgroundColor', 'White')
+        , ('TABLE_TOTAL_Default_BackgroundColor', 'White')
 END
